@@ -1,18 +1,6 @@
 defmodule NumberBases do
-  @moduledoc """
-  Documentation for `NumberBases`.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> NumberBases.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def convert_number(number, input_base, output_base) do
+    IO.inspect({number, input_base, output_base})
+    number |> String.to_integer(input_base) |> Integer.to_string(output_base)
   end
 end
