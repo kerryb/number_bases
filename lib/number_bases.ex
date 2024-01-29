@@ -2,7 +2,7 @@ defmodule NumberBases do
   def convert_number(number, input_base, output_base) do
     validate_base(input_base, "input")
     validate_base(output_base, "output")
-    number |> parse(input_base) |> format(output_base)
+    number |> String.upcase() |> parse(input_base) |> format(output_base)
   end
 
   defp validate_base(base, label) when base not in 2..36, do: raise("Invalid #{label} base")

@@ -14,6 +14,10 @@ defmodule NumberBasesTest do
 
     defp base, do: range(2, 36)
 
+    test "handles lower-case input" do
+      assert NumberBases.convert_number("fF", 16, 10) == "255"
+    end
+
     test "raises an exception for completely invalid input" do
       assert_raise(RuntimeError, "Invalid number", fn ->
         NumberBases.convert_number("?!💩", 10, 16)
