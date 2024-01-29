@@ -20,7 +20,8 @@ defmodule NumberBases.MixProject do
 
   defp deps do
     [
-      {:propcheck, "~> 1.4", only: [:test, :dev]}
+      {:propcheck, "~> 1.4", only: [:test, :dev]},
+      {:styler, "~> 0.11", only: [:dev, :test], runtime: false}
     ]
   end
 end

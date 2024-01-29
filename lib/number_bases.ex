@@ -1,4 +1,5 @@
 defmodule NumberBases do
+  @moduledoc false
   def convert_number(number, input_base, output_base) do
     validate_base(input_base, "input")
     validate_base(output_base, "output")
